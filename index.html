@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Golden Cube General Trading</title>
+<meta name="description" content="Golden Cube General Trading Co. Ltd. — stationery, paper and office supplies trading house in Nasiriyah, Iraq. Rooted in the Al-Anwar stationery business since 1981.">
+<meta property="og:title" content="Golden Cube General Trading Co. Ltd.">
+<meta property="og:description" content="Stationery, paper and office supplies — Nasiriyah, Iraq. In the trade since 1981.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4 58 18v28L32 60 6 46V18z' fill='%23b8892b'/%3E%3Cpath d='M32 4 58 18 32 32 6 18z' fill='%23d9b25c'/%3E%3Cpath d='M32 32v28L6 46V18z' fill='%238f6a1f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600&family=Noto+Kufi+Arabic:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+/* Layout: trading-house letterhead — navy masthead, ledger-ruled sections, gold cube as the single accent */
+:root {
+  --ink: #0f1b2d; --ink-2: #33415a; --muted: #6b778c; --paper: #f6f7f9; --sheet: #ffffff; --rule: #dde2ea;
+  --gold: #b8892b; --gold-2: #d9b25c; --gold-soft: #f4ead4; --navy: #0f1b2d; --on-navy: #e9edf4;
+  --f-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body: "Public Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --f-display-ar: "Noto Kufi Arabic", "Segoe UI", Tahoma, sans-serif;
+  --f-body-ar: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --ink: #e8ecf3; --ink-2: #c3cbd8; --muted: #93a0b5; --paper: #0b1320; --sheet: #111b2b; --rule: #24324a;
+  --gold: #d9b25c; --gold-2: #e9c983; --gold-soft: #2b2414; --navy: #08101c; --on-navy: #e9edf4; color-scheme: dark } }
+:root[data-theme="dark"] { --ink: #e8ecf3; --ink-2: #c3cbd8; --muted: #93a0b5; --paper: #0b1320; --sheet: #111b2b; --rule: #24324a;
+  --gold: #d9b25c; --gold-2: #e9c983; --gold-soft: #2b2414; --navy: #08101c; --on-navy: #e9edf4; color-scheme: dark }
+* { box-sizing: border-box }
+html { scroll-behavior: smooth; scroll-padding-top: 76px }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.7 var(--f-body); -webkit-font-smoothing: antialiased }
+html[lang="ar"] body { font-family: var(--f-body-ar); font-size: 17px; line-height: 1.9 }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 600; line-height: 1.2; margin: 0; text-wrap: balance; letter-spacing: -.01em }
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 { font-family: var(--f-display-ar); font-weight: 700; letter-spacing: 0; line-height: 1.5 }
+a { color: inherit }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)) }
+.eyebrow { font: 600 12px/1 var(--f-body); letter-spacing: .14em; text-transform: uppercase; color: var(--gold) }
+html[lang="ar"] .eyebrow { letter-spacing: 0; font-family: var(--f-body-ar); font-size: 14px }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 3px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; cursor: pointer }
+.btn.gold { background: var(--gold); color: #1a1205 }
+.btn.gold:hover { background: var(--gold-2) }
+.btn.line { border-color: rgba(233, 237, 244, .35); color: var(--on-navy) }
+.btn.line:hover { background: rgba(255, 255, 255, .08) }
+
+/* header */
+header.top { position: sticky; top: 0; z-index: 20; background: var(--navy); color: var(--on-navy); border-bottom: 1px solid rgba(255, 255, 255, .08); padding-top: env(safe-area-inset-top, 0px) }
+.top .wrap { display: flex; align-items: center; gap: 20px; height: 68px }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none }
+.brand svg { width: 34px; height: 34px; flex: none }
+.brand b { font-family: var(--f-display); font-size: 19px; font-weight: 600; letter-spacing: .01em; display: block; line-height: 1.1 }
+.brand span { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; opacity: .7 }
+html[lang="ar"] .brand b { font-family: var(--f-display-ar); font-size: 17px }
+html[lang="ar"] .brand span { letter-spacing: 0; font-size: 12px }
+nav.main { margin-inline-start: auto; display: flex; gap: 22px; font-size: 14px }
+nav.main a { text-decoration: none; opacity: .85 }
+nav.main a:hover { opacity: 1; color: var(--gold-2) }
+.lang { border: 1px solid rgba(233, 237, 244, .35); background: none; color: var(--on-navy); border-radius: 3px; padding: 6px 12px; font: 600 14px var(--f-body-ar); cursor: pointer }
+.lang:hover { border-color: var(--gold-2); color: var(--gold-2) }
+@media (max-width: 860px) { nav.main { display: none } .lang { margin-inline-start: auto } }
+
+/* hero */
+.hero { background: var(--navy); color: var(--on-navy); position: relative; overflow: hidden }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 48px; align-items: center; padding-block: 88px 96px }
+.hero h1 { font-size: clamp(36px, 5.2vw, 62px); color: #fff }
+.hero h1 em { font-style: normal; color: var(--gold-2) }
+.hero p.lead { font-size: 19px; color: #c5cedc; max-width: 56ch; margin: 22px 0 32px }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px }
+.seal { justify-self: center; position: relative; width: min(320px, 70vw); aspect-ratio: 1; max-width: 100% }
+.seal svg { width: 100%; height: 100% }
+.hero .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; padding-block: 56px 64px } .seal { width: 200px } }
+
+/* facts ledger */
+.facts { background: var(--sheet); border-bottom: 1px solid var(--rule) }
+.facts .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) }
+.fact { padding: 28px 24px; border-inline-end: 1px solid var(--rule) }
+.fact:last-child { border-inline-end: 0 }
+.fact b { direction: ltr; unicode-bidi: isolate; display: block; font-family: var(--f-display); font-size: 40px; font-weight: 600; color: var(--gold); line-height: 1.1; font-variant-numeric: lining-nums tabular-nums }
+.fact span { font-size: 14px; color: var(--ink-2) }
+@media (max-width: 760px) { .facts .wrap { grid-template-columns: 1fr 1fr } .fact:nth-child(2) { border-inline-end: 0 } .fact:nth-child(-n+2) { border-bottom: 1px solid var(--rule) } }
+
+/* sections */
+section.s { padding-block: 88px }
+section.s.alt { background: var(--sheet); border-block: 1px solid var(--rule) }
+.shead { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; margin-bottom: 44px; align-items: end }
+.shead h2 { font-size: clamp(28px, 3.4vw, 40px); margin-top: 10px }
+.shead p { color: var(--ink-2); margin: 0; max-width: 62ch }
+@media (max-width: 860px) { .shead { grid-template-columns: 1fr; gap: 14px } section.s { padding-block: 64px } }
+.story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px }
+.story p { margin: 0 0 16px; color: var(--ink-2) }
+.timeline { list-style: none; margin: 0; padding: 0; border-inline-start: 2px solid var(--gold) }
+.timeline li { position: relative; padding: 0 0 24px; padding-inline-start: 24px }
+.timeline li::before { content: ""; position: absolute; inset-inline-start: -7px; top: 8px; width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg) }
+.timeline b { display: block; font-family: var(--f-display); font-size: 20px; color: var(--ink) }
+.timeline span { color: var(--ink-2); font-size: 15px }
+@media (max-width: 860px) { .story { grid-template-columns: 1fr } }
+
+.cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule) }
+.col { background: var(--sheet); padding: 30px 28px }
+section.s.alt .col { background: var(--paper) }
+.col h3 { font-size: 21px; margin-bottom: 12px }
+.col p { color: var(--ink-2); margin: 0 0 12px; font-size: 16px }
+.col ul { margin: 0; padding-inline-start: 18px; color: var(--ink-2); font-size: 15px }
+.col li { margin-bottom: 4px }
+.tag { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px }
+html[lang="ar"] .tag { letter-spacing: 0; font-size: 13px }
+@media (max-width: 960px) { .cols { grid-template-columns: 1fr 1fr } }
+@media (max-width: 640px) { .cols { grid-template-columns: 1fr } }
+
+.sectors { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px }
+.sector { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border: 1px solid var(--rule); background: var(--sheet); border-radius: 3px }
+.sector i { flex: none; width: 10px; height: 10px; background: var(--gold); transform: rotate(45deg); margin-top: 9px }
+.sector b { display: block; font-weight: 600 }
+.sector span { font-size: 14px; color: var(--muted) }
+.note { font-size: 14px; color: var(--muted); margin-top: 18px }
+
+.terms { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px }
+.terms dl { margin: 0; display: grid; grid-template-columns: minmax(130px, auto) 1fr; border-top: 1px solid var(--rule) }
+.terms dt, .terms dd { padding: 14px 0; border-bottom: 1px solid var(--rule); margin: 0 }
+.terms dt { font-weight: 600; color: var(--ink); padding-inline-end: 18px }
+.terms dd { color: var(--ink-2) }
+.terms .box { background: var(--navy); color: var(--on-navy); padding: 32px; border-radius: 3px }
+.terms .box h3 { color: #fff; font-size: 22px; margin-bottom: 12px }
+.terms .box p { color: #c5cedc; margin: 0 0 18px }
+@media (max-width: 860px) { .terms { grid-template-columns: 1fr } }
+
+.mgmt { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px }
+.person { border-top: 3px solid var(--gold); background: var(--sheet); padding: 22px 24px; border-inline: 1px solid var(--rule); border-bottom: 1px solid var(--rule) }
+.person b { display: block; font-family: var(--f-display); font-size: 20px }
+html[lang="ar"] .person b { font-family: var(--f-display-ar); font-size: 18px }
+.person span { color: var(--muted); font-size: 14px }
+
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px }
+.contact .card { background: var(--sheet); border: 1px solid var(--rule); padding: 30px; border-radius: 3px }
+.contact dl { margin: 0; display: grid; gap: 4px 18px; grid-template-columns: auto 1fr }
+.contact dt { color: var(--muted); font-size: 14px; padding-top: 3px }
+.contact dd { margin: 0 0 12px; font-weight: 500 }
+.contact dd a { text-decoration: none; border-bottom: 1px solid var(--gold) }
+.ltr { direction: ltr; unicode-bidi: isolate; display: inline-block }
+form { display: grid; gap: 12px }
+label { display: grid; gap: 4px; font-size: 14px; color: var(--ink-2) }
+input, textarea, select { font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; padding: 11px 12px; width: 100% }
+textarea { min-height: 120px; resize: vertical }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr } }
+@media (max-width: 520px) { .row2 { grid-template-columns: 1fr } }
+
+footer { background: var(--navy); color: #9aa6ba; font-size: 14px; padding-block: 36px calc(36px + env(safe-area-inset-bottom, 0px)) }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between }
+footer b { color: var(--on-navy); font-weight: 600 }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Golden Cube">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 58 18v28L32 60 6 46V18z" fill="#b8892b"/><path d="M32 4 58 18 32 32 6 18z" fill="#d9b25c"/><path d="M32 32v28L6 46V18z" fill="#8f6a1f"/></svg>
+      <div><b data-i="brand">Golden Cube</b><span data-i="brandSub">General Trading Co. Ltd.</span></div>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#about" data-i="nAbout">About</a>
+      <a href="#trade" data-i="nTrade">What we trade</a>
+      <a href="#clients" data-i="nClients">Who we supply</a>
+      <a href="#partners" data-i="nPartners">For manufacturers</a>
+      <a href="#contact" data-i="nContact">Contact</a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <div>
+        <div class="eyebrow" data-i="heroEyebrow">Nasiriyah · Dhi Qar · Iraq — since 1981</div>
+        <h1 style="margin-top:18px" data-i="heroTitle" data-html>Four decades supplying <em>paper and stationery</em> to southern Iraq</h1>
+        <p class="lead" data-i="heroLead">Golden Cube General Trading is the import and contracting arm of the Al-Anwar stationery house, one of the longest-established stationery traders in southern Iraq. We source directly from manufacturers and supply wholesalers, bookshops, schools and government institutions.</p>
+        <div class="cta">
+          <a class="btn gold" href="#contact" data-i="ctaQuote">Request a quotation</a>
+          <a class="btn line" href="#partners" data-i="ctaSupply">Supply to us</a>
+        </div>
+      </div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 320 320">
+          <circle cx="160" cy="160" r="150" fill="none" stroke="#d9b25c" stroke-opacity=".35" stroke-width="1"/>
+          <circle cx="160" cy="160" r="128" fill="none" stroke="#d9b25c" stroke-opacity=".2" stroke-width="1" stroke-dasharray="2 6"/>
+          <g transform="translate(160 160)">
+            <path d="M0-92 80-46v92L0 92-80 46v-92z" fill="#b8892b"/>
+            <path d="M0-92 80-46 0 0-80-46z" fill="#d9b25c"/>
+            <path d="M0 0v92L-80 46v-92z" fill="#8f6a1f"/>
+            <path d="M0-92 80-46v92L0 92-80 46v-92zM0 0 80-46M0 0v92M0 0-80-46" fill="none" stroke="#0f1b2d" stroke-opacity=".25" stroke-width="1.5"/>
+          </g>
+          <text x="160" y="300" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-size="15" letter-spacing="5" fill="#d9b25c">EST. 1981</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="Key facts">
+    <div class="wrap">
+      <div class="fact"><b>1981</b><span data-i="f1">In the stationery trade since</span></div>
+      <div class="fact"><b>~7</b><span data-i="f2">Containers imported per year</span></div>
+      <div class="fact"><b>90%</b><span data-i="f3">Of our range sourced directly from manufacturers in China</span></div>
+      <div class="fact"><b>MK</b><span data-i="f4">Our own stationery brand</span></div>
+    </div>
+  </section>
+
+  <section class="s" id="about">
+    <div class="wrap">
+      <div class="shead">
+        <div><div class="eyebrow" data-i="aEyebrow">About us</div><h2 data-i="aTitle">A family trading house built on quality and fair prices</h2></div>
+        <p data-i="aLead">Golden Cube General Trading Co. Ltd. is a registered Iraqi limited liability company. It carries forward the experience of the Al-Anwar stationery business in Nasiriyah, trading paper, school and office supplies since 1981.</p>
+      </div>
+      <div class="story">
+        <div>
+          <p data-i="a1">What began as a stationery shop on Al-Habboubi Street has grown into a wholesale and retail operation with its own showroom, retail store and warehouses, serving bookshops and institutions across Dhi Qar.</p>
+          <p data-i="a2">For many years we have imported directly from manufacturers, travelling to China every year to visit factories and trade fairs. We work with long-standing production partners in Yiwu and Shanghai and plan each season around their production calendars.</p>
+          <p data-i="a3">Two principles have not changed since the beginning: we do not compromise on quality, and we keep our prices fair.</p>
+        </div>
+        <ol class="timeline">
+          <li><b>1981</b><span data-i="t1">Al-Anwar stationery founded in Nasiriyah.</span></li>
+          <li><b data-i="t2y">Direct import</b><span data-i="t2">Regular sourcing from manufacturers in China, with yearly visits to factories and the Canton Fair.</span></li>
+          <li><b data-i="t3y">Own brand</b><span data-i="t3">Launch of MK, our own label for registers, notebooks and writing instruments.</span></li>
+          <li><b data-i="t4y">Golden Cube</b><span data-i="t4">Golden Cube General Trading Co. Ltd. established to handle import, supply contracts and institutional sales.</span></li>
+          <li><b data-i="t5y">Next</b><span data-i="t5">A 1,200 m² central warehouse in Nasiriyah and an expanded showroom.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="s alt" id="trade">
+    <div class="wrap">
+      <div class="shead">
+        <div><div class="eyebrow" data-i="tEyebrow">What we trade</div><h2 data-i="tTitle">Paper, stationery and office supplies</h2></div>
+        <p data-i="tLead">We buy in container loads and sell wholesale and retail. Our range covers what schools, offices and bookshops use every day.</p>
+      </div>
+      <div class="cols">
+        <div class="col"><div class="tag" data-i="c1t">Paper</div><h3 data-i="c1h">Copy and printing paper</h3><p data-i="c1p">A4 and A3 copy paper in 70 and 80 gsm, photo paper and specialty papers, sourced from mills in Asia.</p></div>
+        <div class="col"><div class="tag" data-i="c2t">School</div><h3 data-i="c2h">Notebooks and registers</h3><p data-i="c2p">Exercise books, registers and record books in many formats, including our MK range.</p></div>
+        <div class="col"><div class="tag" data-i="c3t">Writing</div><h3 data-i="c3h">Pens, pencils and markers</h3><p data-i="c3p">Ballpoint pens, pencils, highlighters, whiteboard markers, erasers and sharpeners.</p></div>
+        <div class="col"><div class="tag" data-i="c4t">Office</div><h3 data-i="c4h">Files and office supplies</h3><p data-i="c4p">Box files, folders, staplers, envelopes, ink, toner cartridges and desk accessories.</p></div>
+        <div class="col"><div class="tag" data-i="c5t">Art</div><h3 data-i="c5h">Art and gifts</h3><p data-i="c5p">Drawing and art supplies, school bags, pencil cases and gift items.</p></div>
+        <div class="col"><div class="tag" data-i="c6t">Private label</div><h3 data-i="c6h">MK brand</h3><p data-i="c6p">Our own label, produced to our specifications by partner factories.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" id="clients">
+    <div class="wrap">
+      <div class="shead">
+        <div><div class="eyebrow" data-i="sEyebrow">Who we supply</div><h2 data-i="sTitle">Wholesale trade and public institutions</h2></div>
+        <p data-i="sLead">Alongside our network of bookshops and stationery retailers, we supply directorates, universities and state companies under the following ministries.</p>
+      </div>
+      <div class="sectors">
+        <div class="sector"><i></i><div><b data-i="m1">Ministry of Health</b><span data-i="m1s">Health directorate and teaching hospitals</span></div></div>
+        <div class="sector"><i></i><div><b data-i="m2">Ministry of Education</b><span data-i="m2s">Education directorates and schools</span></div></div>
+        <div class="sector"><i></i><div><b data-i="m3">Ministry of Higher Education and Scientific Research</b><span data-i="m3s">Universities and colleges</span></div></div>
+        <div class="sector"><i></i><div><b data-i="m4">Ministry of Oil</b><span data-i="m4s">Oil products distribution and gas companies</span></div></div>
+        <div class="sector"><i></i><div><b data-i="m5">Ministry of Construction, Housing and Municipalities</b><span data-i="m5s">Municipal and urban planning directorates</span></div></div>
+        <div class="sector"><i></i><div><b data-i="m6">Wholesale and retail</b><span data-i="m6s">Bookshops, stationery stores and schools across Dhi Qar</span></div></div>
+      </div>
+      <p class="note" data-i="sNote">Institutional supply is carried out through their local directorates and institutions.</p>
+    </div>
+  </section>
+
+  <section class="s alt" id="partners">
+    <div class="wrap">
+      <div class="shead">
+        <div><div class="eyebrow" data-i="pEyebrow">For manufacturers and mills</div><h2 data-i="pTitle">How we work with suppliers</h2></div>
+        <p data-i="pLead">We prefer to work directly with manufacturers and paper mills rather than intermediaries, and we build long-term relationships with the factories we trust.</p>
+      </div>
+      <div class="terms">
+        <dl>
+          <dt data-i="k1">Volumes</dt><dd data-i="v1">Around seven containers per year, 20 ft and 40 ft</dd>
+          <dt data-i="k2">Ordering</dt><dd data-i="v2">Main season orders placed in November and December, plus repeat orders during the year</dd>
+          <dt data-i="k3">Payment</dt><dd data-i="v3">Deposit on order, balance before shipment</dd>
+          <dt data-i="k4">Ports</dt><dd data-i="v4">Umm Qasr (Iraq) and Aqaba (Jordan)</dd>
+          <dt data-i="k5">Interests</dt><dd data-i="v5">Copy paper and paper products, notebooks and registers, writing instruments, files, OEM and private label production</dd>
+          <dt data-i="k6">Visits</dt><dd data-i="v6">We visit China twice a year, in spring and autumn, including the Canton Fair</dd>
+        </dl>
+        <div class="box">
+          <h3 data-i="pBoxH">Send us your catalogue</h3>
+          <p data-i="pBoxP">If you manufacture paper or stationery and can produce to export standards, send your catalogue, price list, MOQ and production lead time. We reply to every serious offer.</p>
+          <a class="btn gold" href="#contact" data-i="pBoxB">Contact our purchasing team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" id="management">
+    <div class="wrap">
+      <div class="shead">
+        <div><div class="eyebrow" data-i="gEyebrow">Management</div><h2 data-i="gTitle">Who you will deal with</h2></div>
+        <p data-i="gLead">Decisions are made by the owners, who are directly involved in purchasing and supplier relations.</p>
+      </div>
+      <div class="mgmt">
+        <div class="person"><b data-i="p1">Mohammed Khairy Jabur</b><span data-i="p1r">Managing Director</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s alt" id="contact">
+    <div class="wrap">
+      <div class="shead">
+        <div><div class="eyebrow" data-i="xEyebrow">Contact</div><h2 data-i="xTitle">Get in touch</h2></div>
+        <p data-i="xLead">We correspond in English and Arabic. For quotations, please include product, specifications and quantity.</p>
+      </div>
+      <div class="contact">
+        <div class="card">
+          <dl>
+            <dt data-i="xAddrK">Address</dt><dd data-i="xAddr">Al-Habboubi Street, Nasiriyah, Dhi Qar Governorate, Iraq</dd>
+            <dt data-i="xPhoneK">Phone / WhatsApp</dt><dd><a class="ltr" href="https://wa.me/9647801122163" target="_blank" rel="noopener">+964 780 112 2163</a></dd>
+            <dt data-i="xMailK">Email</dt><dd><a class="ltr" href="mailto:goldencube24@gmail.com">goldencube24@gmail.com</a></dd>
+          </dl>
+        </div>
+        <form class="card" id="f" novalidate>
+          <div class="row2">
+            <label><span data-i="fName">Name</span><input id="fn" required autocomplete="name"></label>
+            <label><span data-i="fCo">Company</span><input id="fc" autocomplete="organization"></label>
+          </div>
+          <div class="row2">
+            <label><span data-i="fMail">Email</span><input id="fe" type="email" autocomplete="email"></label>
+            <label><span data-i="fType">Subject</span><select id="ft"><option data-i="o1">Quotation request</option><option data-i="o2">Supplier / manufacturer offer</option><option data-i="o3">Other</option></select></label>
+          </div>
+          <label><span data-i="fMsg">Message</span><textarea id="fm" required></textarea></label>
+          <button class="btn gold" type="submit" data-i="fSend">Send by email</button>
+          <span class="note" id="fnote" data-i="fNote">This opens your email app with the message ready to send.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b data-i="ftName">Golden Cube General Trading Co. Ltd.</b><br><span data-i="ftAddr">Al-Habboubi Street, Nasiriyah, Iraq</span></div>
+    <div data-i="ftSince">Part of the Al-Anwar stationery house · since 1981</div>
+    <div>© <span id="yr"></span> Golden Cube</div>
+  </div>
+</footer>
+
+<script>
+(() => {
+const AR = {
+  brand: 'المكعب الذهبي', brandSub: 'للتجارة العامة محدودة المسؤولية',
+  nAbout: 'من نحن', nTrade: 'ما نتاجر به', nClients: 'من نجهّز', nPartners: 'للمصانع والموردين', nContact: 'اتصل بنا',
+  heroEyebrow: 'الناصرية · ذي قار · العراق — منذ 1981',
+  heroTitle: 'أربعة عقود في تجهيز <em>الورق والقرطاسية</em> لجنوب العراق',
+  heroLead: 'شركة المكعب الذهبي للتجارة العامة هي ذراع الاستيراد والتعاقد لمكتبة الأنوار، من أعرق تجار القرطاسية في جنوب العراق. نستورد مباشرة من المصانع، ونجهّز تجار الجملة والمكتبات والمدارس والمؤسسات الحكومية.',
+  ctaQuote: 'اطلب عرض سعر', ctaSupply: 'كن مورداً لنا',
+  f1: 'في تجارة القرطاسية منذ', f2: 'حاوية نستوردها سنوياً تقريباً', f3: 'من موادنا نستوردها مباشرة من مصانع في الصين', f4: 'علامتنا التجارية الخاصة',
+  aEyebrow: 'من نحن', aTitle: 'بيت تجاري عائلي قائم على الجودة والسعر العادل',
+  aLead: 'شركة المكعب الذهبي للتجارة العامة محدودة المسؤولية شركة عراقية مسجّلة، تحمل خبرة مكتبة الأنوار في الناصرية التي تتاجر بالورق ومستلزمات المدارس والمكاتب منذ عام 1981.',
+  a1: 'بدأت مكتبة صغيرة في شارع الحبوبي، وأصبحت اليوم تعمل بالجملة والمفرد، بمعرض ومحل مفرد ومخازن، وتجهّز المكتبات والمؤسسات في محافظة ذي قار.',
+  a2: 'نستورد مباشرة من المصانع منذ سنوات طويلة، ونسافر إلى الصين كل سنة لزيارة المصانع والمعارض. نعمل مع شركاء إنتاج قدامى في ييوو وشنغهاي، ونخطط كل موسم حسب جداول إنتاجهم.',
+  a3: 'مبدآن لم يتغيرا منذ البداية: لا نتنازل عن الجودة، ونحافظ على السعر العادل.',
+  t1: 'تأسيس مكتبة الأنوار للقرطاسية في الناصرية.', t2y: 'الاستيراد المباشر', t2: 'استيراد منتظم من المصانع في الصين، وزيارات سنوية للمصانع ولمعرض كانتون.',
+  t3y: 'علامتنا الخاصة', t3: 'إطلاق علامة MK للسجلات والدفاتر وأدوات الكتابة.', t4y: 'المكعب الذهبي', t4: 'تأسيس شركة المكعب الذهبي للتجارة العامة لتولي الاستيراد وعقود التجهيز والبيع للمؤسسات.',
+  t5y: 'القادم', t5: 'مخزن مركزي بمساحة 1,200 م² في الناصرية، وتوسيع المعرض.',
+  tEyebrow: 'ما نتاجر به', tTitle: 'الورق والقرطاسية والمستلزمات المكتبية', tLead: 'نشتري بالحاويات ونبيع بالجملة والمفرد. موادنا تغطي ما تحتاجه المدارس والمكاتب والمكتبات يومياً.',
+  c1t: 'الورق', c1h: 'ورق الاستنساخ والطباعة', c1p: 'ورق A4 وA3 بوزن 70 و80 غرام، وورق الصور والأنواع الخاصة، من مصانع في آسيا.',
+  c2t: 'المدارس', c2h: 'الدفاتر والسجلات', c2p: 'دفاتر وسجلات بأحجام وأنواع كثيرة، منها مجموعة MK.',
+  c3t: 'الكتابة', c3h: 'الأقلام', c3p: 'أقلام جاف ورصاص وتظليل وأقلام سبورة، ومساحات ومبارٍ.',
+  c4t: 'المكتب', c4h: 'الفايلات والمستلزمات المكتبية', c4p: 'بوكس فايل وملفات وكابسات وظروف وأحبار وخراطيش طابعات ومستلزمات المكتب.',
+  c5t: 'الرسم', c5h: 'أدوات الرسم والهدايا', c5p: 'أدوات الرسم والفنون، والحقائب المدرسية، والمحافظ، والهدايا.',
+  c6t: 'علامة خاصة', c6h: 'علامة MK', c6p: 'علامتنا الخاصة، تُنتج حسب مواصفاتنا لدى مصانع شريكة.',
+  sEyebrow: 'من نجهّز', sTitle: 'تجارة الجملة والمؤسسات الحكومية', sLead: 'إلى جانب شبكة المكتبات وتجار القرطاسية، نجهّز دوائر وجامعات وشركات حكومية تابعة للوزارات التالية.',
+  m1: 'وزارة الصحة', m1s: 'دائرة الصحة والمستشفيات التعليمية', m2: 'وزارة التربية', m2s: 'مديريات التربية والمدارس',
+  m3: 'وزارة التعليم العالي والبحث العلمي', m3s: 'الجامعات والكليات', m4: 'وزارة النفط', m4s: 'شركات توزيع المنتجات النفطية والغاز',
+  m5: 'وزارة الإعمار والإسكان والبلديات', m5s: 'مديريات البلديات والتخطيط العمراني', m6: 'الجملة والمفرد', m6s: 'المكتبات ومحلات القرطاسية والمدارس في ذي قار',
+  sNote: 'يتم التجهيز للمؤسسات عن طريق دوائرها ومؤسساتها المحلية.',
+  pEyebrow: 'للمصانع ومعامل الورق', pTitle: 'كيف نعمل مع الموردين', pLead: 'نفضّل التعامل مباشرة مع المصانع ومعامل الورق بدل الوسطاء، ونبني علاقات طويلة مع المصانع التي نثق بها.',
+  k1: 'الحجم', v1: 'حوالي سبع حاويات سنوياً، 20 و40 قدماً', k2: 'الطلب', v2: 'طلبات الموسم الرئيسية في تشرين الثاني وكانون الأول، وطلبات إضافية خلال السنة',
+  k3: 'الدفع', v3: 'عربون عند الطلب، والباقي قبل الشحن', k4: 'الموانئ', v4: 'أم قصر (العراق) والعقبة (الأردن)',
+  k5: 'ما يهمنا', v5: 'ورق الاستنساخ ومنتجات الورق، والدفاتر والسجلات، وأدوات الكتابة، والفايلات، والتصنيع بعلامة خاصة', k6: 'الزيارات', v6: 'نزور الصين مرتين في السنة، في الربيع والخريف، ومنها معرض كانتون',
+  pBoxH: 'أرسل لنا كتالوجك', pBoxP: 'إذا كنت تصنّع الورق أو القرطاسية بمواصفات التصدير، أرسل الكتالوج وقائمة الأسعار والحد الأدنى للطلب ومدة الإنتاج. نرد على كل عرض جاد.', pBoxB: 'تواصل مع قسم المشتريات',
+  gEyebrow: 'الإدارة', gTitle: 'من ستتعامل معه', gLead: 'القرار عند أصحاب العمل مباشرة، وهم يتولون المشتريات والعلاقة مع الموردين بأنفسهم.',
+  p1: 'محمد خيري جبر', p1r: 'المدير المفوض',
+  xEyebrow: 'اتصل بنا', xTitle: 'تواصل معنا', xLead: 'نراسل بالعربية والإنجليزية. لطلب عرض سعر اذكر المادة والمواصفات والكمية.',
+  xAddrK: 'العنوان', xAddr: 'شارع الحبوبي، الناصرية، محافظة ذي قار، العراق', xPhoneK: 'الهاتف / واتساب', xMailK: 'البريد',
+  fName: 'الاسم', fCo: 'الشركة', fMail: 'البريد الإلكتروني', fType: 'الموضوع', o1: 'طلب عرض سعر', o2: 'عرض من مورد أو مصنع', o3: 'غير ذلك', fMsg: 'الرسالة', fSend: 'أرسل بالبريد', fNote: 'يفتح تطبيق البريد والرسالة جاهزة للإرسال.',
+  ftName: 'شركة المكعب الذهبي للتجارة العامة محدودة المسؤولية', ftAddr: 'شارع الحبوبي، الناصرية، العراق', ftSince: 'من بيت مكتبة الأنوار للقرطاسية · منذ 1981'
+};
+const nodes = [...document.querySelectorAll('[data-i]')];
+const EN = {}; nodes.forEach((n) => { EN[n.dataset.i] = n.hasAttribute('data-html') ? n.innerHTML : n.textContent; });
+const btn = document.getElementById('lang');
+function apply(l) {
+  const T = l === 'ar' ? AR : EN;
+  nodes.forEach((n) => { const v = T[n.dataset.i]; if (v == null) return; if (n.hasAttribute('data-html')) n.innerHTML = v; else n.textContent = v; });
+  document.documentElement.lang = l; document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+  btn.textContent = l === 'ar' ? 'English' : 'العربية';
+  document.title = l === 'ar' ? 'المكعب الذهبي للتجارة العامة' : 'Golden Cube General Trading';
+  try { localStorage.setItem('gc-lang', l); } catch (e) {}
+}
+let L = 'en'; try { L = new URLSearchParams(location.search).get('lang') || localStorage.getItem('gc-lang') || 'en'; } catch (e) {}
+if (L === 'ar') apply('ar');
+btn.addEventListener('click', () => apply(document.documentElement.lang === 'ar' ? 'en' : 'ar'));
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.getElementById('f').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const v = (id) => document.getElementById(id).value.trim();
+  if (!v('fn') || !v('fm')) { document.getElementById('fnote').textContent = document.documentElement.lang === 'ar' ? 'اكتب الاسم والرسالة.' : 'Please enter your name and message.'; return; }
+  const sub = v('ft') + ' — ' + (v('fc') || v('fn'));
+  const body = v('fm') + '\n\n' + v('fn') + (v('fc') ? '\n' + v('fc') : '') + (v('fe') ? '\n' + v('fe') : '');
+  location.href = 'mailto:goldencube24@gmail.com?subject=' + encodeURIComponent(sub) + '&body=' + encodeURIComponent(body);
+});
+})();
+</script>
+</body>
+</html>
